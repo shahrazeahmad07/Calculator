@@ -9,7 +9,7 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var tvInput: TextView
-    private var lastDigit = false
+    private var lastDigit = true
     private var lastDot = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +28,6 @@ class MainActivity : AppCompatActivity() {
 
     fun onClear(view: View) {
         tvInput.text = ""
-        lastDot = false
-        lastDigit = false
     }
 
     fun onDecimalPoint(view: View) {
@@ -37,6 +35,24 @@ class MainActivity : AppCompatActivity() {
             tvInput.append(".")
             lastDigit = false
             lastDot = true
+        }
+    }
+
+    fun onOperator(view: View) {
+        if (lastDigit && !isOperatorAdded(tvInput.text.toString())) {
+            tvInput.append((view as Button).text)
+            lastDigit = false
+            lastDot = false
+
+        }
+    }
+
+    private fun isOperatorAdded(value: String): Boolean {
+        return if(value.startsWith("-")) {
+            false
+        }
+        else {
+            value.contains("+") || value.contains("-") || value.contains("/") || value.contains("*")
         }
     }
 }

@@ -27,42 +27,53 @@
             android:id="@+id/btnSeven"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="7"
+            android:text="@string/_7"
             android:onClick="onDigit"
             android:textSize="20sp"
             android:backgroundTint="@color/Gray"
             android:layout_weight="1"
-            tools:ignore="UsingOnClickInXml" />
+            tools:ignore="UsingOnClickInXml"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/btnEight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="8"
+            android:text="@string/_8"
             android:textSize="20sp"
             android:onClick="onDigit"
             android:backgroundTint="@color/Gray"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="UsingOnClickInXml" />
 
         <Button
             android:id="@+id/btnNine"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="9"
+            android:text="@string/_9"
             android:textSize="20sp"
             android:onClick="onDigit"
             android:backgroundTint="@color/Gray"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="UsingOnClickInXml" />
 
         <Button
             android:id="@+id/btnDivide"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="/"
+            android:text="@string/divide"
             android:textSize="20sp"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:backgroundTint="@color/Gray"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="UsingOnClickInXml" />
 
     </LinearLayout>
 
@@ -77,42 +88,53 @@
             android:id="@+id/btnFour"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="4"
+            android:text="@string/_4"
             android:textSize="20sp"
             android:onClick="onDigit"
             android:backgroundTint="@color/Gray"
             android:layout_weight="1"
-            tools:ignore="OnClick" />
+            tools:ignore="OnClick,UsingOnClickInXml"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"/>
 
         <Button
             android:id="@+id/btnFive"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="5"
+            android:text="@string/_5"
             android:textSize="20sp"
             android:onClick="onDigit"
             android:backgroundTint="@color/Gray"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="UsingOnClickInXml" />
 
         <Button
             android:id="@+id/btnSix"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="6"
+            android:text="@string/_6"
             android:textSize="20sp"
             android:onClick="onDigit"
             android:backgroundTint="@color/Gray"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="UsingOnClickInXml" />
 
         <Button
             android:id="@+id/btnMultiply"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="*"
+            android:text="@string/multiply"
             android:textSize="20sp"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:backgroundTint="@color/Gray"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="UsingOnClickInXml" />
 
     </LinearLayout>
 
@@ -127,42 +149,53 @@
             android:id="@+id/btnOne"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="1"
+            android:text="@string/_1"
             android:textSize="20sp"
             android:onClick="onDigit"
             android:backgroundTint="@color/Gray"
             android:layout_weight="1"
-            tools:ignore="OnClick" />
+            tools:ignore="OnClick,UsingOnClickInXml"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"/>
 
         <Button
             android:id="@+id/btnTwo"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="2"
+            android:text="@string/_2"
             android:textSize="20sp"
             android:onClick="onDigit"
             android:backgroundTint="@color/Gray"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="UsingOnClickInXml" />
 
         <Button
             android:id="@+id/btnThree"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="3"
+            android:text="@string/_3"
             android:textSize="20sp"
             android:onClick="onDigit"
             android:backgroundTint="@color/Gray"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="UsingOnClickInXml" />
 
         <Button
             android:id="@+id/btnSubtract"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="-"
+            android:text="@string/subtract"
             android:textSize="20sp"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:backgroundTint="@color/Gray"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="UsingOnClickInXml" />
 
     </LinearLayout>
 
@@ -177,23 +210,27 @@
             android:id="@+id/btnDot"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="."
+            android:text="@string/dot"
             android:textSize="20sp"
             android:onClick="onDecimalPoint"
             android:backgroundTint="@color/Gray"
-            android:layout_weight="1.5"
-            />
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="UsingOnClickInXml" />
 
         <Button
             android:id="@+id/btnZero"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="0"
+            android:text="@string/_0"
             android:textSize="20sp"
             android:onClick="onDigit"
             android:backgroundTint="@color/Gray"
-            android:layout_weight="1.5"
-            tools:ignore="OnClick" />
+            android:layout_weight="2"
+            tools:ignore="OnClick,UsingOnClickInXml"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"/>
 
 
 
@@ -201,40 +238,49 @@
             android:id="@+id/btnAdd"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="+"
+            android:text="@string/add"
             android:textSize="20sp"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:backgroundTint="@color/Gray"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="UsingOnClickInXml" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@color/Gray">
+        android:layout_weight="0.8"
+        android:background="@color/Gray"
+        android:padding="0dp">
 
         <Button
             android:id="@+id/btnClear"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="CLR"
+            android:text="@string/clear"
             android:textSize="20sp"
             android:onClick="onClear"
             android:backgroundTint="@color/Gray"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="UsingOnClickInXml" />
 
         <Button
             android:id="@+id/btnEqual"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="="
+            android:text="@string/equal"
             android:textSize="20sp"
             android:onClick="onDigit"
             android:backgroundTint="@color/Gray"
-            tools:ignore="UsingOnClickInXml" />
+            tools:ignore="UsingOnClickInXml"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"/>
     </LinearLayout>
 
 </LinearLayout>
