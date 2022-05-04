@@ -9,7 +9,7 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var tvInput: TextView
-    private var lastDigit = true
+    private var lastDigit = false
     private var lastDot = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +45,82 @@ class MainActivity : AppCompatActivity() {
             lastDot = false
 
         }
+    }
+
+    fun onEqual(view: View) {
+        if(lastDigit) {
+            var tvValue = tvInput.text.toString()
+            var prefix = ""
+            try {
+                if (tvValue.startsWith("-")) {
+                    tvValue = tvValue.substring(1)
+                    prefix = "-"
+                }
+                //! Subtract Code.
+                if (tvValue.contains("-")) {
+                    val splitValue = tvValue.split("-")
+                    var one = splitValue[0]
+                    val two = splitValue[1]
+
+                    if (prefix.isNotEmpty()) {
+                        one = prefix + one
+                    }
+                    tvInput.text = removeZero((one.toDouble() - two.toDouble()).toString())
+                }
+
+                //! Addition code
+                else if (tvValue.contains("+")) {
+                    val splitValue = tvValue.split("+")
+                    var one = splitValue[0]
+                    val two = splitValue[1]
+
+                    if (prefix.isNotEmpty()) {
+                        one = prefix + one
+                    }
+                    tvInput.text = removeZero((one.toDouble() + two.toDouble()).toString())
+                }
+
+                //! Multiplication
+                else if (tvValue.contains("*")) {
+                    val splitValue = tvValue.split("*")
+                    var one = splitValue[0]
+                    val two = splitValue[1]
+
+                    if (prefix.isNotEmpty()) {
+                        one = prefix + one
+                    }
+                    tvInput.text = removeZero((one.toDouble() * two.toDouble()).toString())
+                }
+
+                //! Division
+                else if (tvValue.contains("/")) {
+                    val splitValue = tvValue.split("/")
+                    var one = splitValue[0]
+                    val two = splitValue[1]
+
+                    if (two != "0") {
+                        if (prefix.isNotEmpty()) {
+                            one = prefix + one
+                        }
+                        tvInput.text = removeZero((one.toDouble() / two.toDouble()).toString())
+                    } else {
+                        tvInput.text = getString(R.string.infinity)
+                    }
+                }
+
+            } catch (e: ArithmeticException) {
+                e.printStackTrace()
+            }
+        }
+    }
+
+    private fun removeZero(result: String): String {
+
+        return if (result.contains(".0")) {
+            val resultWithoutZero = result.substring(0, result.length-2)
+            resultWithoutZero
+        } else
+            result
     }
 
     private fun isOperatorAdded(value: String): Boolean {

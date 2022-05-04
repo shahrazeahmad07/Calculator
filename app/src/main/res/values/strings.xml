@@ -17,4 +17,5 @@
     <string name="add">+</string>
     <string name="clear">CLR</string>
     <string name="equal">=</string>
+    <string name="infinity">Infinity</string>
 </resources>

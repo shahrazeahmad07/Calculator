@@ -276,7 +276,7 @@
             android:layout_weight="1"
             android:text="@string/equal"
             android:textSize="20sp"
-            android:onClick="onDigit"
+            android:onClick="onEqual"
             android:backgroundTint="@color/Gray"
             tools:ignore="UsingOnClickInXml"
             android:textColor="@color/white"
