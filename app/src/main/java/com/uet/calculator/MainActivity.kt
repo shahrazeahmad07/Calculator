@@ -9,7 +9,7 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var tvInput: TextView
-    private var lastDigit = false
+    private var lastDigit = true
     private var lastDot = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
