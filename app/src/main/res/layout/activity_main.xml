@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/tvInput"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="350dp"
         android:textSize="48sp"
         android:gravity="end|bottom"
         android:background="@color/black"
@@ -204,7 +204,7 @@
         android:layout_height="wrap_content"
         android:background="@color/Gray"
         android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_weight="0.2">
 
         <Button
             android:id="@+id/btnDot"
@@ -252,7 +252,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.8"
+        android:layout_weight="0.5"
         android:background="@color/Gray"
         android:padding="0dp">
 

@@ -1,16 +1,18 @@
 package com.uet.calculator
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import java.text.DecimalFormat
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var tvInput: TextView
     private var lastDigit = true
     private var lastDot = false
+    private val decimalFormat: DecimalFormat = DecimalFormat("0.0000")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                     if (prefix.isNotEmpty()) {
                         one = prefix + one
                     }
-                    tvInput.text = removeZero((one.toDouble() - two.toDouble()).toString())
+                    tvInput.text = removeZero(decimalFormat.format((one.toDouble() - two.toDouble())).toString())
                 }
 
                 //! Addition code
@@ -77,7 +79,7 @@ class MainActivity : AppCompatActivity() {
                     if (prefix.isNotEmpty()) {
                         one = prefix + one
                     }
-                    tvInput.text = removeZero((one.toDouble() + two.toDouble()).toString())
+                    tvInput.text = removeZero(decimalFormat.format((one.toDouble() + two.toDouble())).toString())
                 }
 
                 //! Multiplication
@@ -89,7 +91,7 @@ class MainActivity : AppCompatActivity() {
                     if (prefix.isNotEmpty()) {
                         one = prefix + one
                     }
-                    tvInput.text = removeZero((one.toDouble() * two.toDouble()).toString())
+                    tvInput.text = removeZero(decimalFormat.format((one.toDouble() * two.toDouble())).toString())
                 }
 
                 //! Division
@@ -102,7 +104,7 @@ class MainActivity : AppCompatActivity() {
                         if (prefix.isNotEmpty()) {
                             one = prefix + one
                         }
-                        tvInput.text = removeZero((one.toDouble() / two.toDouble()).toString())
+                        tvInput.text = removeZero(decimalFormat.format((one.toDouble() / two.toDouble())).toString())
                     } else {
                         tvInput.text = getString(R.string.infinity)
                     }
